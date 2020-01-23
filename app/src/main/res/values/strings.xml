@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">RecyclerView With CardView</string>
+    <string name="country_name">Country Name</string>
+    <string name="description_of_the_country">Description of the country</string>
+    <string name="flag_of_the_country">flag of the country</string>
+
+    <string-array name="country_name">
+        <item>Afghanistan</item>
+        <item>America</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Bhutan</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>Finland</item>
+        <item>Ghana</item>
+        <item>Hungary</item>
+        <item>Indonesia</item>
+        <item>Japan</item>
+    </string-array>
+
+
+    <string-array name="country_details">
+        <item>Afghanistan is beautiful</item>
+        <item>America is beautiful</item>
+        <item>Bahrain is beautiful</item>
+        <item>Bangladesh is beautiful</item>
+        <item>Bhutan is beautiful</item>
+        <item>Canada is beautiful</item>
+        <item>Denmark is beautiful</item>
+        <item>Finland is beautiful</item>
+        <item>Ghana is beautiful</item>
+        <item>Hungary is beautiful</item>
+        <item>Indonesia is beautiful</item>
+        <item>Japan is beautiful</item>
+    </string-array>
+
+
+
+</resources>
