@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
+    private static ClickListener clickListener;
+
     Context context;
     String[] title, disc;
     int[] flags;
@@ -46,7 +48,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return title.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
         TextView title, disc;
         ImageView flags;
 
@@ -57,8 +59,33 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             disc = itemView.findViewById(R.id.countryDetailsId);
             flags = itemView.findViewById(R.id.imageViewId);
 
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
 
 
         }
+
+        @Override
+        public void onClick(View v) {
+            clickListener.onItemClick(getAdapterPosition(),v);
+        }
+
+        @Override
+        public boolean onLongClick(View v) {
+            clickListener.onItemLongClick(getAdapterPosition(),v);
+            return false;
+        }
+    }
+
+    public interface ClickListener{
+
+        public void onItemClick(int position, View v);
+        public void onItemLongClick(int position, View v);
+
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener){
+        MyAdapter.clickListener = clickListener;
+
     }
 }

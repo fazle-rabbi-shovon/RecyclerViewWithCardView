@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +33,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        int X = 10;
+        myAdapter.setOnItemClickListener(new MyAdapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, View v) {
+                Toast.makeText(MainActivity.this, "On Item Click"+position, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemLongClick(int position, View v) {
+                Toast.makeText(MainActivity.this, "On Long Item Click"+position, Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
     }
