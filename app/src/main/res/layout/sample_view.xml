@@ -22,7 +22,7 @@
 
         <LinearLayout
 
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/country_name"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
